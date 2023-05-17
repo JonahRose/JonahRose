@@ -22,6 +22,18 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
+                <script>
+                   //show and hide dropdown list item on button click
+                   function show_hide() {
+                      var click = document.getElementById("list-items");
+                      if (click.style.display === "none") {
+                         click.style.display = "block";
+                      } else {
+                         click.style.display = "none";
+                      }
+                   }
+                </script>
+
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
@@ -35,10 +47,9 @@
                                 <p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
 								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
                                 -->
-                                <p> I am a graduate research fellow at the University of Florida's Department of Astronomy.
+                                <p> 
+                                I am a graduate research fellow at the University of Florida's Department of Astronomy.
                                 My research is focused on exploring alternative dark matter models through state of the art cosmological simulations.
-                                </p>
-                                <p> This website is a work in progress.
                                 </p>
 							</div>
 						</div>
@@ -46,6 +57,15 @@
 							<ul>
 								<li><a href="#about">about</a></li>
 								<li><a href="#research">Research</a></li>
+                                <!--<li> <div class="dropdown">
+                                    <button class="dropbtn">Research</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">ML</a>
+                                        <a href="#">SIDM</a>
+                                        <a href="#">Neutron Stars</a>
+                                    </div>
+                                </div></li>
+                                -->
 								<li><a href="#publications">Publications</a></li>
 								<li>
 									<a href = "files/Jonah_Rose_Curriculum_Vitae.pdf" download ="Jonah_Rose_Curriculum_Vitae.pdf" target="_blank">
@@ -64,28 +84,43 @@
 							<article id="about">
 								<h2 class="major">About</h2>
 								<span class="image"><img src="images/head_shot.jpg" alt=""  width="300" height="300"></span>
-								<p> I am a person who does stuff.
+								<p> I am a graduate researcher at the University of Florida's Department of Astronomy. I study dark matter models that differ from cold dark matter to see if the better explain our observations of the dark matter in our Universe. More recently I am training machine learning models to determine the dark matter model from field-level images.
                                 </p>
+                                <p> I am from Portland OR and got my bachelor in Physics, Math and Computer Science from the University of Oregon in 2019. I got my Masters of Astronomy from the University of Florida in 2020 and am currently working toward obtaining my PhD. In fall 2023 I will be a predoc fellow at the Center for Computational Astrophysics in NYC.
 							</article>
 
 						<!-- Research -->
 							<article id="research">
 								<h2 class="major">Research</h2>
 								<span class="image main"><img src="images/research_bkg.png" alt="" /></span>
-								<p> I do research about stuff.
+								<p> 
+                                I run cosmological simulations of alternative dark matter models with the IllustrisTNG galaxy formation model.
+                                Specifically, I work with models within the Effective Theory of Structure Formation (ETHOS) which allows a direct mapping from particle physics models onto inputs for cosmological simulations.
+                                The models I use contain both suppression to the initial matter power spectrum and dark matter particle self-interactions.
+                                These extra physical properties cause the dark matter to behave differently than cold dark matter and offer potential solutions to many of the small scale problems currently vexing astronomers.
 								</p>
+                                <span class="image main"><img src="images/camels.png" alt="" /></span>
+								<p> 
+                                Recently I have explored a new method, developed by the CAMELS collaboration, that utilizes machine learning to constrain large and uncertain parameter spaces, like the properties of dark matter.
+                                To do this, I train a CNN on images from over 1,000 cosmological simulations to determine dark matter properties from an image taken from one of the simulations.
+                                I find that these models can determine dark matter properties to much better accuracy than other state-of-the-art methods.
+								</p>
+                                <span class="image main"><img src="images/bns.png" alt="" /></span>
 								<p>
-								</p>
+                                For my Masters project I used the galaxy catalogs (>100,000 galaxies) from the IllustrisTNG cosmological simulations with the BPASS stellar population models to determine which galaxies are most likely to host binary neutron star mergers.
+                                I found that most BNS mergers occur in Milky Way-like galaxies, but on a galaxy-by-galaxy search, more massive galaxies are most likely to host a binary neutron star merger.
+                                </p>
 							</article>
 							
 						<!-- Publications -->
 							<article id="publications">
 								<h2 class="major">Publications</h2>
 								<!-- <span class="image main"><img src="images/pic01.jpg" alt="" /></span> -->
-								<p> List of publications with links.
-                                </p>
-								<p> 
-                                </p>
+								<a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.519.5623R/abstract" target="_blank"><p><b>Rose, Jonah C.</b>, Paul Torrey, Mark Vogelsberger, and Stephanie O’Neil. Unravelling the interplay between SIDM and baryons in MW haloes: defining where baryons dictate heat transfer. <i>MNRAS</i>, volume 519, pages 5623–5636, March 2023.</p></a>
+								<a href="https://ui.adsabs.harvard.edu/abs/2023arXiv230414432R/abstract" target="_blank"><p><b>Rose, Jonah C.</b>, Paul Torrey, Francisco Villaescusa-Navarro, Mark Vogelsberger, Stephanie O’Neil, Ryan Low, Rakshak Adhikari, and Mikhail V. Medvedev. Inferring Warm Dark Matter Masses with Deep Learning; , 2023, <i>arXiv</i>, arXiv:2304.14432.</p></a>
+                                <a href="https://ui.adsabs.harvard.edu/abs/2022arXiv221016328O/abstract" target="_blank"><p>Stephanie O’Neil, Mark Vogelsberger, Saniya Heeba, Katelin Schutz, <b>Rose, Jonah C.</b>, Paul Torrey, Josh Borrow, Ryan Low, Rakshak Adhikari, Mikhail V. Medvedev, Tracy R. Slatyer, and Jesús Zavala. Endothermic self-interacting dark matter in Milky Way-like dark matter haloes. <i>arXiv e-prints</i>, page arXiv:2210.16328, October 2022. </p></a>
+                                <a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...909..207R/abstract" target="_blank"><p><b>Rose, Jonah C.</b>, Paul Torrey, K. H. Lee, and I. Bartos. Where Binary Neutron Stars Merge: Predictions from IllustrisTNG. <i>APJ</i>, volume 909, page 207, March 2021.</p></a>
+                                <a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...902L..23L/abstract" target="_blank"><p>K. H. Lee, I. Bartos, G. C. Privon, <b>Rose, Jonah C.</b>, and P. Torrey. FIRST J1419+3940 as the First Observed Radio Flare from a Neutron Star Merger. <i>APJ Letters</i>, volume 902, page L23, October 2020.</p></a>
 							</article>
 
 						<!-- Contact -->
@@ -122,9 +157,7 @@
 									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
                                     -->
-									<li>
-                                        <div><a href="https://github.com/JonahRose" target="_blank" class="icon brands fa-github"></a></div>
-                                    </li>
+									<li><div><a href="https://github.com/JonahRose" target="_blank" class="icon brands fa-github"></a></div></li>
                                     <li><a href="mailto:j.rose@ufl.edu" target="_blank" class="far fa-envelope"><span class="label"></span></a></li>
                                     <li><a href="https://astro.ufl.edu/directory/jonah-rose/" target="_blank" class="far fa-building"><span class="label"></span></a></li>
 								</ul>
